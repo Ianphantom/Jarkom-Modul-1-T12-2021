@@ -33,9 +33,8 @@ setelah mendapatkan username dan password, kami berhasil masuk kedalam website
 <img src="Screenshot Praktikum Jarkom 1/no5 2.png">   
 ### 6. Cari username dan password ketika melakukan login ke FTP Server!
 Mengisi display filter dengan : ```ftp.request.command == PASS || ftp.request.command == USER```   
-<img src="Screenshot Praktikum Jarkom 1/no6 1.png">   
 Lalu kami menemukan data : USERNAME : secretuser | PASSWORD : aku.pengen.pw.aja   
-<img src="Screenshot Praktikum Jarkom 1/no6 2.png">   
+<img src="Screenshot Praktikum Jarkom 1/no6.png">    
 ### 7. Ada 500 file zip yang disimpan ke FTP Server dengan nama 0.zip, 1.zip, 2.zip, ..., 499.zip. Simpan dan Buka file pdf tersebut. (Hint = nama pdf-nya "Real.pdf")
 Menggunakan display filter dengan : ```frame contains "Real.pdf"```  
 <img src="Screenshot Praktikum Jarkom 1/no7 1.png">   
