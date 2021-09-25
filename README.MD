@@ -47,20 +47,35 @@ Menggunakan display filter dengan : ```ftp.request.command == RETR```
 dan menemukan tidak ada paket yang didownload dari FTP server   
 <img src="Screenshot Praktikum Jarkom 1/no8.png">   
 ### 9. Dari paket-paket yang menuju FTP terdapat inidkasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
-Karna key “Indikasi penyimpanan” saya memasukkan ```ftp-data.command == "STOR secret.zip"```   
+Karna key “Indikasi penyimpanan” saya memasukkan ```ftp-data.command == "STOR secret.zip"```  
+<img src="Screenshot Praktikum Jarkom 1/no9 1.png">
 Melihat file data tersebut, kami menemukan secret.zip. Setelah itu kami melakukan follow tcp stream. Lalu mengganti tipe file ke RAW lalu di save as zip.   
-Dan file tersebut rupanya membutuhkan password   
+<img src="Screenshot Praktikum Jarkom 1/no9 2.png">
+Dan file tersebut rupanya membutuhkan password 
+<img src="Screenshot Praktikum Jarkom 1/no9 3.png">
 ### 10. Selain itu terdapat "history.txt" yang kemungkinan berisi history bash server tersebut! Gunakan isi dari "history.txt" untuk menemukan password untuk membuka file rahasia yang ada di "secret.zip"!
 Menggunakan display filter dengan : ```ftp-data.command == "STOR history.txt"  ```   
+<img src="Screenshot Praktikum Jarkom 1/no10 1.png">
 dari data tersebut, bisa dilihat bahwa file tersebut dikunci dengan file bukanapaapa.txt. Lallu kami mencari file bukanapaapa.txt dengan perintah : ```ftp-data.command == "STOR bukanapaapa.txt"```   
-setelah itu kami menemukan password yang digunakan adalah : Password : d1b1langbukanapaapajugagapercaya   
+<img src="Screenshot Praktikum Jarkom 1/no10 2.png">
+setelah itu kami menemukan password yang digunakan adalah : Password : d1b1langbukanapaapajugagapercaya  
+<img src="Screenshot Praktikum Jarkom 1/no10 3.png">
 ### 11. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!\
-menggunakan capture filter : ```src port 80```   
+menggunakan capture filter : ```src port 80```  
+<img src="Screenshot Praktikum Jarkom 1/no11.png">
 ### 12. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
 Mengisi Capture Filter dengan : ```Port 21```   
+<img src="Screenshot Praktikum Jarkom 1/no12 1.png">
+<img src="Screenshot Praktikum Jarkom 1/no12 2.png">
 ### 13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
-Mengisi Capture Filter dengan : ```tcp.port == 80```   
+Mengisi Capture Filter dengan : ```tcp.port == 80```  
+<img src="Screenshot Praktikum Jarkom 1/no13.png">
 ### 14. Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!  
-Pertama kami mencari IP dari kemenag dengan perintah ```PING kemenag.go.id``` pada terminal. Setelah itu kami menemukan IP nya adalah 103.7.13.247. Lalu kami melakukan capture filter dengan perintah : ```dst host 103.7.13.247 ```
+Pertama kami mencari IP dari kemenag dengan perintah ```PING kemenag.go.id``` pada terminal. 
+<img src="Screenshot Praktikum Jarkom 1/no14 1.png">
+Setelah itu kami menemukan IP nya adalah 103.7.13.247. Lalu kami melakukan capture filter dengan perintah : ```dst host 103.7.13.247 ```
+<img src="Screenshot Praktikum Jarkom 1/no14 2.png">
 ### 15. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 Mengisi capture filter dengan : ```rc host 192.168.100.7```
+<img src="Screenshot Praktikum Jarkom 1/no15 1.png">
+<img src="Screenshot Praktikum Jarkom 1/no14 2.png">
