@@ -79,3 +79,6 @@ Setelah itu kami menemukan IP nya adalah 103.7.13.247. Lalu kami melakukan captu
 Mengisi capture filter dengan : ```rc host 192.168.100.7```
 <img src="Screenshot Praktikum Jarkom 1/no15 1.png">
 <img src="Screenshot Praktikum Jarkom 1/no14 2.png">
+
+## Kendala yang dialami
+- Tidak ada kendala dalam pengerjaan modul ini
